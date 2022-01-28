@@ -2,45 +2,266 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jadessoriano</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jadessoriano</title>
 
-    <link rel="stylesheet" href="resources/styles/main.css">
+  <link rel="stylesheet" href="resources/styles/main.css" />
 </head>
 
 <body>
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
 
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "108536048401279");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v12.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+
+  <header id="header" class="container">
+    <nav>
+      <a id="logo-link" href="#">
+        <p id="logo">
+          <span class="link-effect">jade</span>
+          <span>s</span>
+          <span class="link-effect">soriano</span>
+        </p>
+      </a>
+    </nav>
+
+    <div id="headline-container" class="">
+      <div class="headline">
+        <p>I'm Jade</p>
+        <p>I design, build and launch websites that can prove your worth.</p>
+        <button onclick="location.href='mailto:jadesiguasoriano@gmail.com'" type="button" class="link-effect hover-me">
+          <span>let's work together</span>
+        </button>
+        <a href="#about-me">
+          <img class="scroll scroll-down link-effect" src="https://img.icons8.com/ios/100/4A49D7/circled-down-2.png" />
+        </a>
+      </div>
+      <div class="navigation">
+        <img id="me__3d" src="./resources/images/3d_model_me_main.png" alt="me" />
+        <a class="link contact_3d" href="#contacts">
+          <span data-tooltip="Contacts">
+            <img class="link-effect nav-link" src="./resources/images/3d_model_contact.png" alt="contact" />
+          </span>
+        </a>
+        <a class="link notes_3d" href="#about-me">
+          <span data-tooltip="About">
+            <img class="link-effect nav-link" src="./resources/images/3d_model_notes.png" alt="notes" />
+          </span>
+        </a>
+        <a class="link rocket_3d" href="#projects">
+          <span data-tooltip="Projects">
+            <img class="link-effect nav-link" src="./resources/images/3d_model_rocket.png" alt="rocket" />
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="my-marquee" id="marquee-demo">
+      <div>
+        <p>" Everything is designed.</p>
+        <p>&nbsp; Few things are designed well.</p>
+      </div>
     </div>
 
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "108536048401279");
-        chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+    <div class="me">
+      <div class="divider">
+        <img id="about-me" class="fan" src="./resources/images/fan.png" alt="fan" />
+      </div>
+      <div class="photo">
+        <p class="about-text">web developer</p>
+        <img src="./resources/images/Group1.png" alt="Jade Soriano" />
+      </div>
+      <div class="first-paragraph about-text about-paragraph">
+        <p>
+          I started doing some frontend works back in 2018 just for a course
+          project with HTML, CSS and JS. Since then I have enjoyed things
+          about the web. And while I still learn and improve my skills I also
+          explore other technology trends for web projects.
+        </p>
+      </div>
+      <div class="second-paragraph about-text about-paragraph">
+        <p>
+          I have passion in transforming ideas into real product using
+          problem-solving & collaborative approach, it engages my enthusiastic
+          creativity to everything that I work on.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Your SDK code -->
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v12.0'
-            });
-        };
+  <section id="projects" class="projects">
+    <nav>
+      <ul>
+        <li class="project-nav-link link-effect highlight">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24"
+            height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <line x1="15" y1="16" x2="19" y2="12"></line>
+            <line x1="15" y1="8" x2="19" y2="12"></line>
+          </svg>
+          <span>Web Apps</span>
+        </li>
+        <li class="project-nav-link link-effect">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="0"
+            height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <line x1="15" y1="16" x2="19" y2="12"></line>
+            <line x1="15" y1="8" x2="19" y2="12"></line>
+          </svg>
+          <span>Web Designs</span>
+        </li>
+      </ul>
+    </nav>
 
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <div class="project-grid web-apps">
+      <div class="">
+        <a href="https://university-ph.herokuapp.com/" target="_blank">
+          <img class="project-image" src="./resources/images/univ.png" alt="">
+        </a>
+        <p class="project-title">Online College Enrollment System</p>
+        <p class="project-description">a system that processes students' enrollment and grades.</p><br>
+      </div>
+      <div class="">
+        <a href="https://local-clinic-system.herokuapp.com/" target="_blank">
+          <img class="project-image" src="./resources/images/clinic.png" alt="">
+        </a>
+        <p class="project-title">General Clinic System</p>
+        <p class="project-description">a system that can manage patients' records, appointments and payments.</p>
+      </div>
+    </div>
+
+    <div class="project-grid web-designs hidden">
+      <div class="spotlight" data-src="./resources/images/upper.png">
+        <img class="project-image" src="./resources/images/pandemiso1.png" alt="">
+        <p class="project-title">Pandemiso</p>
+        <p class="project-description">a B2C company that sells coin-operated WiFi hotspot machines</p>
+      </div>
+      <span class="spotlight hidden" data-src="./resources/images/lower.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/landingpage.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19202.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19203.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19204.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19205.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19206.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Web19207.png"></span>
+      <div class="empty"></div>
+      <div class="empty"></div>
+      <div class="spotlight" data-src="./resources/images/TodoList-AI Create.png">
+        <img class="project-image" src="./resources/images/todo1.png" alt="">
+        <p class="project-title">Todo App</p>
+        <p class="project-description">list the tasks you need to complete or things that you want to do</p>
+      </div>
+      <span class="spotlight hidden" data-src="./resources/images/TodoList-Ai Tasks.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Group812.png"></span>
+      <div class="spotlight" data-src="./resources/images/Annotation 2020-09-29 174101.png">
+        <img class="project-image" src="./resources/images/movie app1.png" alt="">
+        <p class="project-title">Movie Streaming App</p>
+        <p class="project-description">watch latest movies anytime and anywhere</p>
+      </div>
+      <span class="spotlight hidden" data-src="./resources/images/Annotation 2020-09-29 174254.png"></span>
+      <span class="spotlight hidden" data-src="./resources/images/Annotation 2020-09-29 174647.png"></span>
+    </div>
+  </section>
+
+  <footer id="contacts">
+    <p>Keep in touch.</p>
+
+    <div>
+      <ul>
+        <li>address</li>
+        <li>Pasig City, Metro Manila Philippines, 1600</li>
+        <li>©2022 jadessoriano</li>
+      </ul>
+      <ul>
+        <li>contacts</li>
+        <li>
+          <a class="link-effect" href="mailto:jadesiguasoriano@gmail.com">
+            jadesiguasoriano@gmail.com
+          </a>
+        </li>
+        <li>+6395 0924 666</li>
+      </ul>
+      <ul>
+        <li>socials</li>
+        <li>
+          <a href="https://github.com/jade-creator" target="_blank" class="link-effect">
+            github
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jadesoriano/" target="_blank" class="link-effect">
+            linkedin
+          </a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/13957204/jade" target="_blank" class="link-effect">
+            stackoverflow
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/jdsrn.1999/" target="_blank" class="link-effect">
+            facebook
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="#header">
+      <img class="scroll scroll-down link-effect" src="https://img.icons8.com/ios/50/feead8/circled-up-2.png" />
+    </a>
+  </footer>
+
+  <svg class="cursor" width="75" height="75" viewBox="0 0 140 140">
+    <defs>
+      <filter id="filter-1" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="10" result="warp"></feTurbulence>
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="60" in="SourceGraphic" in2="warp">
+        </feDisplacementMap>
+      </filter>
+    </defs>
+    <circle class="cursor-circle" cx="70" cy="70" r="67"></circle>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" defer></script>
+  <script type="text/javascript" src="https://unpkg.com/jsmarquee@1.0.4/dist/marquee.min.js"></script>
+  <script type="text/javascript" src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/spotlight.bundle.js"
+    defer></script>
+  <script src="./resources/js/main.js" defer></script>
 </body>
 
 </html>
